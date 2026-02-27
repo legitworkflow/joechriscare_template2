@@ -1,0 +1,155 @@
+
+
+@media (max-width: 992px) {
+  .hero-section {
+    background-attachment: scroll;
+  }
+
+  .page-header {
+    background-attachment: scroll;
+  }
+
+  .admin-aside {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .admin-aside.show {
+    transform: translateX(0);
+  }
+
+  .admin-main {
+    margin-left: 0;
+    /* reset on mobile */
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  h2,
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content .lead {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .intro-title {
+    font-size: 1.8rem;
+  }
+
+  .intro-content {
+    text-align: left;
+  }
+
+   #scrollToTop {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.3rem;
+  }
+
+   /* Prevent horizontal scroll on medium screens */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* .container,
+  .container-lg {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  } */
+} 
+
+
+
+
+
+
+@media (max-width: 575px) {
+  .navbar-brand img{
+    height: 60px;
+  }
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: linear-gradient(135deg, var(--royal-blue) 0%, var(--dark-blue) 100%);
+    border-bottom: 3px solid var(--accent-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    background: var(--light-blue);
+    transition: all 0.3s ease;
+    color: var(--white) !important;
+  }
+
+  
+  .nav-link:hover,
+  .nav-link.active {
+    background: var(--warning);
+    color: var(--white) !important;
+    transform: translateX(5px);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+  
+  
+  /* Prevent horizontal scroll on small screens *
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  .container,
+  .container-lg {
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  .row > * {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  /* Ensure buttons don't overflow *
+  .cutom_btn {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+  
+  /* Fix for any elements that might cause overflow *
+  * {
+    max-width: 100%;
+  }
+  
+  /* Ensure sections don't overflow 
+  section {
+    overflow-x: hidden;
+  }
+  */
+  
+}

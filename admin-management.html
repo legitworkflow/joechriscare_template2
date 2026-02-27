@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Content Management</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media_query.css">
+</head>
+
+<body>
+
+  <div class="d-flex admin_wrapper position-relative">
+
+    <!-- BACKDROP (md ↓ only) -->
+    <div id="sidebarBackdrop" class="sidebar-backdrop d-lg-none d-none"></div>
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="admin-aside">
+      <div class="d-flex align-items-center justify-content-between p-3 border-bottom text-white">
+        <div class="sidebar-header text-center">
+
+          <a href="admin-dashboard.html">
+            <img src="images/logo.png" alt="Logo" class="sidebar-logo">
+          </a>
+          <h5 class="sidebar-title">Admin Panel</h5>
+        </div>
+
+        <!-- CLOSE (md ↓ only) -->
+        <button class="btn btn-sm btn-light d-lg-none" id="closeSidebar">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <ul class="nav nav-pills flex-column gap-1 p-3">
+        <li class="nav-item"><a class="nav-link text-white" href="admin-dashboard.html"><i
+              class="bi bi-speedometer2 me-2"></i>
+            Dashboard</a></li>
+        <li class="nav-item">
+          <a class="nav-link text-white d-flex align-items-center justify-content-between" href="admin-messages.html">
+            <span>
+              <i class="bi bi-chat-dots me-2"></i>
+              Messages
+            </span>
+            <span class="badge bg-danger rounded-pill">5</span>
+          </a>
+        </li>
+
+        <li class="nav-item"><a class="nav-link text-white" href="admin-services.html"><i class="bi bi-briefcase me-2"></i>
+            Services</a>
+        </li>
+        <li class="nav-item"><a class="nav-link text-white active" href="admin-management.html"><i class="bi bi-folder me-2"></i>
+            Content
+            Management</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="admin-settings.html"><i class="bi bi-gear me-2"></i>
+            Settings</a></li>
+      </ul>
+
+      <div class="mt-auto p-3 border-top">
+        <a href="#" class="nav-link text-danger fw-bold dash_link">
+          <i class="bi bi-box-arrow-right me-2"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="admin-main flex-fill">
+
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-light bg-white border-bottom sticky-top px-3">
+        <div class="d-flex align-items-center gap-3 w-100">
+
+          <!-- TOGGLE (md ↓ only) -->
+          <button class="btn btn-outline-primary d-lg-none" id="openSidebar">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <form class="flex-fill">
+            <input type="search" class="form-control" placeholder="Search...">
+          </form>
+
+          <div class="position-relative">
+            <i class="bi bi-bell fs-5"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+          </div>
+
+          <div class="dropdown">
+            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+              data-bs-toggle="dropdown">
+              <img src="https://i.pravatar.cc/32" class="rounded-circle me-2">
+              <span class="fw-semibold">Admin</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="admin-settings.html">Settings</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+
+      <!-- Content -->
+      <div class="container-fluid p-4">
+
+        <!-- Page Header -->
+        <div class="mb-4" data-aos="flip-down">
+          <h1 class="h3 fw-bold mb-1">Content Manager</h1>
+          <p class="text-secondary mb-0">Edit website pages and content</p>
+        </div>
+
+        <div class="row g-4">
+
+          <!-- Pages Sidebar -->
+          <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <h6 class="fw-bold mb-3">Pages</h6>
+
+                <div class="list-group list-group-flush">
+                  <a class="list-group-item list-group-item-action active" href="#">
+                    <i class="bi bi-house me-2"></i>Homepage
+                  </a>
+                  <a class="list-group-item list-group-item-action" href="#">
+                    <i class="bi bi-info-circle me-2"></i>About Us
+                  </a>
+                  <a class="list-group-item list-group-item-action" href="#">
+                    <i class="bi bi-briefcase me-2"></i>Services
+                  </a>
+                  <a class="list-group-item list-group-item-action" href="#">
+                    <i class="bi bi-envelope me-2"></i>Contact
+                  </a>
+                  <a class="list-group-item list-group-item-action" href="#">
+                    <i class="bi bi-shield-lock me-2"></i>Privacy Policy
+                  </a>
+                </div>
+
+                <button class="btn btn-outline-primary w-100 mt-3">
+                  <i class="bi bi-plus-lg me-2"></i>Add New Page
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Editor -->
+          <div class="col-lg-9" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card shadow-sm">
+              <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                <h5 class="mb-0 fw-bold">Edit Homepage</h5>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-secondary btn-sm">
+                    <i class="bi bi-eye me-1"></i>Preview
+                  </button>
+                  <button class="btn btn-primary btn-sm">
+                    <i class="bi bi-save me-1"></i>Save Changes
+                  </button>
+                </div>
+              </div>
+
+              <div class="card-body">
+
+                <!-- Hero Section -->
+                <div class="mb-4">
+                  <label class="form-label fw-bold">Hero Section</label>
+
+                  <div class="mb-3">
+                    <label class="form-label">Title</label>
+                    <input class="form-control" type="text" value="Premier Healthcare Staffing Solutions">
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Subtitle</label>
+                    <textarea class="form-control" rows="2">
+Connecting exceptional care professionals with facilities across the UK
+              </textarea>
+                  </div>
+
+                  <div>
+                    <label class="form-label">Button Text</label>
+                    <input class="form-control" type="text" value="Get Started">
+                  </div>
+                </div>
+
+                <!-- About Section -->
+                <div class="mb-4">
+                  <label class="form-label fw-bold">About Section</label>
+
+                  <div class="btn-toolbar gap-2 mb-2">
+                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-type-bold"></i></button>
+                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-type-italic"></i></button>
+                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-type-underline"></i></button>
+                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-list-ul"></i></button>
+                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-link-45deg"></i></button>
+                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-image"></i></button>
+                  </div>
+
+                  <div class="border rounded p-3 bg-light" contenteditable="true">
+                    <p>
+                      At Joechris Care Ltd, trading as Lastminute Care & Nursing, we are dedicated to providing
+                      high-quality,
+                      reliable healthcare staffing solutions to care providers across the United Kingdom.
+                    </p>
+                    <p>
+                      With a commitment to professionalism, safety, and person-centred care, we connect skilled
+                      healthcare
+                      professionals with facilities that need them most.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="mb-4">
+                  <label class="form-label fw-bold">Statistics Section</label>
+                  <div class="row g-3">
+                    <div class="col-md-3">
+                      <label class="form-label">Years Experience</label>
+                      <input class="form-control" type="number" value="15">
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label">Staff Members</label>
+                      <input class="form-control" type="number" value="1892">
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label">Active Placements</label>
+                      <input class="form-control" type="number" value="156">
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label">Satisfaction Rate</label>
+                      <input class="form-control" type="text" value="98.5%">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="mb-4">
+                  <label class="form-label fw-bold">Contact Information</label>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Phone Number</label>
+                      <input class="form-control" type="tel" value="0141 266 0676">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Email Address</label>
+                      <input class="form-control" type="email" value="glasgow@lastminutenursing.com">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SEO -->
+                <div class="mb-4">
+                  <label class="form-label fw-bold">SEO Settings</label>
+
+                  <div class="mb-3">
+                    <label class="form-label">Meta Title</label>
+                    <input class="form-control" type="text" value="Joechris Care Ltd | Premier Healthcare Staffing">
+                  </div>
+
+                  <div>
+                    <label class="form-label">Meta Description</label>
+                    <textarea class="form-control" rows="2">UK's leading healthcare staffing agency. Connecting exceptional care  professionals with facilities nationwide.
+                    </textarea>
+                  </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="text-end">
+                  <button class="btn btn-outline-secondary me-2">Cancel</button>
+                  <button class="btn btn-primary">
+                    <i class="bi bi-save me-2"></i>Save All Changes
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </main>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const backdrop = document.getElementById('sidebarBackdrop');
+
+    function openSidebar() {
+      sidebar.classList.add('show');
+      backdrop.classList.remove('d-none');
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('show');
+      backdrop.classList.add('d-none');
+    }
+
+    document.getElementById('openSidebar').onclick = openSidebar;
+    document.getElementById('closeSidebar').onclick = closeSidebar;
+    backdrop.onclick = closeSidebar;
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Rounded Background -->
+  <rect width="512" height="512" rx="110" fill="#2A7DBF"/>
+
+  <!-- Medical Cross -->
+  <rect x="380" y="80" width="40" height="140" fill="white"/>
+  <rect x="340" y="120" width="120" height="40" fill="white"/>
+
+  <!-- Company Name -->
+  <text x="50%" y="52%" 
+        text-anchor="middle" 
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="110"
+        font-weight="700"
+        fill="white">
+    JC
+  </text>
+
+  <!-- Subtext -->
+  <text x="50%" y="70%" 
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="48"
+        font-weight="600"
+        fill="white"
+        letter-spacing="4">
+    CARE
+  </text>
+
+</svg>
