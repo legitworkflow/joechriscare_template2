@@ -116,7 +116,7 @@ html {
       rgba(15, 32, 65, 0.35) 0%,
       rgba(15, 32, 65, 0.35) 100%
     ),
-    url('/images/bg.png');
+    url('../images/bg.png');
     
   background-size: cover;
   background-position: center;
@@ -613,7 +613,7 @@ html {
       rgba(15, 32, 65, 0.35) 0%,
       rgba(15, 32, 65, 0.35) 100%
     ),
-    url('/images/bg1.jpg');
+    url('../images/bg1.jpg');
   background-size: cover;
   background-position: center;
 }
