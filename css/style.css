@@ -115,14 +115,18 @@ html {
 }
 
 /* ? Hero Section */
-.hero-section {
-  background: linear-gradient(135deg,
-      rgba(15, 32, 65, 0.35) 0%,
-      rgba(15, 32, 65, 0.35) 100%),
-    url('../images/bg.png');
 
-  background-size: cover;
+.hero-section {
+  background: linear-gradient(
+      135deg,
+      rgba(15, 32, 65, 0.35) 0%,
+      rgba(15, 32, 65, 0.35) 100%
+    ),
+    url('../images/bg_hero.jpg');
+
+  background-size: cover;      /* shows full image */
   background-position: center;
+  background-repeat: no-repeat;  /* prevents tiling */
   background-attachment: fixed;
   min-height: 550px;
 }
@@ -588,23 +592,6 @@ html {
 /* ?ABOUT PAGE  */
 /*! ========== ========== */
 /* ?Page Header */
-/* .page-header {
-  background: linear-gradient(135deg, rgba(65, 105, 225, 0.85) 0%, rgba(44, 62, 80, 0.85) 100%),
-    url('/images/bg.png');
-  background-size: cover;
-  background-position: center;
-}
-
-.page-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 165, 0, 0.15) 0%, transparent 70%);
-  animation: pulse 8s ease-in-out infinite;
-} */
 
 
 .page-header {
@@ -612,19 +599,37 @@ html {
     linear-gradient(135deg,
       rgba(15, 32, 65, 0.35) 0%,
       rgba(15, 32, 65, 0.35) 100%),
-    url('../images/bg1.jpg');
+    url('../images/bg_about.jpg');
+    /* url('../images/bg1.jpg'); */
   background-attachment: fixed;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
 }
 
+.contact-header {
+  background:
+    linear-gradient(135deg,
+      rgba(15, 32, 65, 0.35) 0%,
+      rgba(15, 32, 65, 0.35) 100%),
+    url('../images/bg_contact.jpg') !important;
+  background-attachment: fixed;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+    
+}
 .service-header {
   background:
     linear-gradient(135deg,
       rgba(15, 32, 65, 0.35) 0%,
       rgba(15, 32, 65, 0.35) 100%),
-    url('../images/bg2.jpg') !important;
+    url('../images/bg_services.jpg') !important;
+  background-attachment: fixed;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+    
 }
 .page-header::before {
   content: '';
