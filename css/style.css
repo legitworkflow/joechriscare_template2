@@ -125,7 +125,7 @@ html {
     url('../images/bg_hero.jpg');
 
   background-size: cover;      /* shows full image */
-  background-position: center;
+  background-position: center center !important;
   background-repeat: no-repeat;  /* prevents tiling */
   background-attachment: fixed;
   min-height: 550px;
